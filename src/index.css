@@ -1,0 +1,168 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #121212; /* Dark background */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+  text-align: center;
+  padding: 20px;
+  background-color: #333; /* Dark header */
+  color: white;
+  margin-bottom: 10px;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #4267B2; /* Dark blue button */
+  color: white;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.3s;
+}
+
+button:hover {
+  border-color: #646cff;
+  background-color: #365899; /* Darker blue on hover */
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.App {
+  width: 100%;
+  max-width: 600px;
+  height: 90vh;
+  background-color: #1E1E1E; /* Darker background for chat box */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #1E1E1E; /* Match the chat box background */
+}
+
+.message {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  width: fit-content;
+  max-width: 70%;
+  color: white; /* White text color for readability */
+}
+
+.message.user {
+  align-self: flex-end;
+  background-color: #4A4A4A; /* Dark grey for user messages */
+}
+
+.message.bot {
+  align-self: flex-start;
+  background-color: #2E2E2E; /* Slightly darker grey for bot messages */
+}
+
+form {
+  display: flex;
+  border-top: 1px solid #333; /* Dark border */
+  padding: 10px;
+  background-color: #1E1E1E; /* Match the chat box background */
+}
+
+input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #333; /* Dark border */
+  border-radius: 20px;
+  outline: none;
+  margin-right: 10px;
+  background-color: #333; /* Dark input background */
+  color: white; /* White text for input */
+}
+
+input::placeholder {
+  color: #bbb; /* Lighter grey placeholder text */
+}
+
+.scrollable-container {
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.message pre {
+  white-space: pre-wrap; /* Preserve line breaks */
+  word-wrap: break-word; /* Ensure long words break correctly */
+  margin: 0; /* Remove default margin */
+}
